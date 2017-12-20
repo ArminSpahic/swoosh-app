@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swoosh_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="swoosh_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="-78" y="22"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="uFf-s8-Gwg">
             <objects>
-                <viewController id="fYJ-v7-GPa" sceneMemberID="viewController">
+                <viewController id="fYJ-v7-GPa" customClass="LeagueVC" customModule="swoosh_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uID-uX-Uss">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,6 +181,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="fYJ-v7-GPa" eventType="touchUpInside" id="sBV-Ah-wfB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdw-Ap-f3e">
                                 <rect key="frame" x="0.0" y="35" width="83" height="24"/>
@@ -215,16 +218,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="okc-Ti-pOH"/>
                     </view>
+                    <connections>
+                        <segue destination="2ri-Gf-e3x" kind="show" identifier="skillVCSegue" id="JsA-qi-e0F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDY-dP-RKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CIL-f1-91N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="548" y="21.139430284857571"/>
+            <point key="canvasLocation" x="593" y="21"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Yd7-Jl-38j">
             <objects>
-                <viewController id="2ri-Gf-e3x" sceneMemberID="viewController">
+                <viewController id="2ri-Gf-e3x" customClass="SkillVC" customModule="swoosh_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hf2-BV-hmw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,6 +299,16 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P3-sQ-csO">
+                                <rect key="frame" x="0.0" y="35" width="83" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="6W8-JV-pv6"/>
+                                    <constraint firstAttribute="height" constant="24" id="cRA-P4-7dJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="mDu-IT-Q7N"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="xh8-ip-AP4"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -302,6 +318,7 @@
                             <constraint firstItem="Ci2-Dd-oM8" firstAttribute="leading" secondItem="oI2-Ge-P6f" secondAttribute="leading" id="NhH-Wp-G0i"/>
                             <constraint firstItem="nap-WL-qP9" firstAttribute="leading" secondItem="oI2-Ge-P6f" secondAttribute="leading" constant="20" id="Ns5-6S-8HW"/>
                             <constraint firstItem="nap-WL-qP9" firstAttribute="top" secondItem="oI2-Ge-P6f" secondAttribute="top" constant="20" id="Pk1-lc-dgU"/>
+                            <constraint firstItem="9P3-sQ-csO" firstAttribute="top" secondItem="oI2-Ge-P6f" secondAttribute="top" constant="15" id="ThI-CK-c2e"/>
                             <constraint firstItem="Ci2-Dd-oM8" firstAttribute="bottom" secondItem="oI2-Ge-P6f" secondAttribute="bottom" id="YiA-Ii-GRp"/>
                             <constraint firstItem="oI2-Ge-P6f" firstAttribute="bottom" secondItem="7pz-qa-w7F" secondAttribute="bottom" constant="20" id="c54-d8-bk7"/>
                             <constraint firstItem="Myp-Qz-4aY" firstAttribute="leading" secondItem="oI2-Ge-P6f" secondAttribute="leading" constant="20" id="eLN-X2-2D4"/>
@@ -315,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJI-mT-Kxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170.4000000000001" y="21.139430284857571"/>
+            <point key="canvasLocation" x="1254" y="21"/>
         </scene>
     </scenes>
     <resources>
