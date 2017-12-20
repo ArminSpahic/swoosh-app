@@ -50,6 +50,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fYJ-v7-GPa" kind="show" id="oTs-jN-usc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4f-Tq-tl9">
                                 <rect key="frame" x="60" y="215" width="255" height="35"/>
@@ -175,9 +178,20 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="NEXT">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdw-Ap-f3e">
+                                <rect key="frame" x="0.0" y="35" width="83" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Bjl-7c-ugE"/>
+                                    <constraint firstAttribute="width" constant="83" id="vuX-uw-eTC"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="CIL-f1-91N" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="Nby-rN-eXa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,7 +202,9 @@
                             <constraint firstItem="2nP-Cb-IDP" firstAttribute="leading" secondItem="okc-Ti-pOH" secondAttribute="leading" constant="20" id="CvJ-TV-RPE"/>
                             <constraint firstItem="okc-Ti-pOH" firstAttribute="trailing" secondItem="kPB-cT-B5h" secondAttribute="trailing" constant="20" id="EcR-tl-VVe"/>
                             <constraint firstItem="GfP-UM-f5F" firstAttribute="leading" secondItem="okc-Ti-pOH" secondAttribute="leading" id="Llp-oH-d4n"/>
+                            <constraint firstItem="Mdw-Ap-f3e" firstAttribute="leading" secondItem="okc-Ti-pOH" secondAttribute="leading" id="NgP-6y-7Ws"/>
                             <constraint firstItem="GfP-UM-f5F" firstAttribute="top" secondItem="okc-Ti-pOH" secondAttribute="top" constant="20" id="Qeg-0W-e7t"/>
+                            <constraint firstItem="Mdw-Ap-f3e" firstAttribute="top" secondItem="okc-Ti-pOH" secondAttribute="top" constant="15" id="RkF-5a-mNr"/>
                             <constraint firstItem="okc-Ti-pOH" firstAttribute="bottom" secondItem="2nP-Cb-IDP" secondAttribute="bottom" constant="20" id="SwL-5e-b5q"/>
                             <constraint firstItem="kPB-cT-B5h" firstAttribute="leading" secondItem="okc-Ti-pOH" secondAttribute="leading" constant="20" id="UKK-mw-eZ7"/>
                             <constraint firstItem="okc-Ti-pOH" firstAttribute="bottom" secondItem="2nP-Cb-IDP" secondAttribute="bottom" constant="20" id="h6v-Iz-i9u"/>
@@ -201,6 +217,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDY-dP-RKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CIL-f1-91N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="548" y="21.139430284857571"/>
         </scene>
@@ -302,6 +319,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
